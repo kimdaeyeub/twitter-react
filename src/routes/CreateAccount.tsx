@@ -1,4 +1,8 @@
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+  updateProfile,
+} from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../firebase";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,6 +15,7 @@ import {
   Title,
   Wrapper,
 } from "../components/auth-components";
+import GithubBtn from "../components/GithubBtn";
 
 const CreateAccount = () => {
   const navigate = useNavigate();
@@ -57,6 +62,7 @@ const CreateAccount = () => {
       setLoading(false);
     }
   };
+
   return (
     <Wrapper>
       <Title>Join 𝕏</Title>
@@ -94,6 +100,7 @@ const CreateAccount = () => {
       <Switcher>
         Already have an account? <Link to="/login">Log in &rarr;</Link>
       </Switcher>
+      <GithubBtn />
     </Wrapper>
   );
 };
