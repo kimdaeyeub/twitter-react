@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   gap: 50px;
   overflow-y: scroll;
   grid-template-rows: 1fr 5fr;
-  scrollbar-width: thin;
+  scrollbar-width: none;
 `;
 
 const Home = () => {
