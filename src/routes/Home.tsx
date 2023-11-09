@@ -1,7 +1,14 @@
-import { auth } from "../firebase";
+import styled from "styled-components";
+import PostTweetForm from "../components/PostTweetForm";
+
+const Wrapper = styled.div``;
 
 const Home = () => {
-  return <h1></h1>;
+  return (
+    <Wrapper>
+      <PostTweetForm />
+    </Wrapper>
+  );
 };
 
 export default Home;
